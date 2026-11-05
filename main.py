@@ -11,7 +11,7 @@ from services.jira_fields import get_field
 #     print(field["id"],">=", field["name"])
 
 req_agent = RequirementAgent()
-state = req_agent.process("Demo-1")
+state = req_agent.process("DEMO-1")
 # print("\nSTATE")
 # for k,v in state.items():
 #     print(f"{k}:{v}")
