@@ -1,7 +1,11 @@
 import requests
 import json
+import os
 
 def generate_ai_test_cases(scenario):
+    if (os.getenv("CI") == "true"):
+        return ("AI generation skipped in CI")
+
     prompt = f"""
     You are a Senior QA Engineer.
     Generate:
