@@ -24,10 +24,8 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Verify Project Structure
+      - name: Run Agent
         run: |
-          ls -R
-
-      - name: Pipeline Completed
-        run: |
-          echo "Jira QA Agent CI/CD Successful"
+          python main.py  
+          
+    
