@@ -11,15 +11,11 @@ def get_issue(issue_key):
             "accept":"application/json"
             }
         )
-    return response.json()
+    print("STATUS:", response.status_code)
 
-def get_field():
-    url = f"{JIRA_URL}/rest/api/3/field"
-    response = requests.get(
-        url, 
-        auth=HTTPBasicAuth(EMAIL, API_TOKEN),
-        headers={
-            "accept":"application/json"
-            }
-        )
+    print("RESPONSE:")
+
+    print(response.text)
+
+    return response.json()
     return response.json()
