@@ -2,7 +2,8 @@ from agents.requirement_agent import RequirementAgent
 from agents.test_design_agent import TestDesignAgent
 from agents.review_agent import ReviewAgent
 from agents.report_agent import ReportAgent
-from services.jira_client import get_field
+from services.jira_client import get_issue
+from services.jira_fields import get_field
 
 
 # fields = get_field()
