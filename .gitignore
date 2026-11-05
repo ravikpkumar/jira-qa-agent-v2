@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+outputs/*.json
+outputs/*.xlsx
+outputs/*.txt
+.venv/
+venv/
