@@ -11,11 +11,11 @@ def get_issue(issue_key):
             "accept":"application/json"
             }
         )
+    
+    print("Request URL:", url)
+    print("Email:", EMAIL)
     print("STATUS:", response.status_code)
-
-    print("RESPONSE:")
-
-    print(response.text)
+    print("RESPONSE:", response.text)
 
     return response.json()
     return response.json()
