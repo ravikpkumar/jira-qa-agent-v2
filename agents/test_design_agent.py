@@ -1,6 +1,8 @@
 from tools.test_generator import generate_test_cases
 from tools.test_case_builder import build_test_case
 from tools.ai_test_generator import generate_ai_test_cases
+from tools.json_exporter import save_test_cases_json
+from tools.excel_exporter import save_test_cases_excel
 
 class TestDesignAgent:
     def process(self, state):
@@ -25,5 +27,8 @@ class TestDesignAgent:
         state["test_cases"] = test_cases
         print("\nBefore Return - Stored Test Cases:")
         print("\nStored Test Cases:",len(test_cases))
+
+        save_test_cases_json(test_cases)
+        save_test_cases_excel(test_cases)
 
         return state

@@ -31,4 +31,22 @@ jobs:
             API_TOKEN: ${{ secrets.API_TOKEN }}
         run: |
             python main.py
-    
+            
+      - name: Upload Executive Report
+        uses: actions/upload-artifact@v4
+        with:
+            name: executive-report
+            path: outputs/executive_report.txt
+
+      - name: Upload JSON Test Cases
+        uses: actions/upload-artifact@v4
+        with:
+            name: test-cases-json
+            path: outputs/test_cases.json
+
+      - name: Upload Excel Test Cases
+        uses: actions/upload-artifact@v4
+        with:
+            name: test-cases-excel
+            path: outputs/test_cases.xlsx
+        
